@@ -1,116 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aayush Donde - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chroma Folio Replica</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-container">
-            <h2 class="fade-in">Aayush Donde</h2>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="index.html#interests">Interests</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="hero-text slide-in-left">
-                <h1>Hi, I'm <span class="highlight">Aayush Shailesh Donde</span></h1>
-                <h3>Computer Engineering Student</h3>
-                <p>Exploring new technologies and solving real-world problems through creative engineering solutions.</p>
-                <div class="buttons">
-                    <a href="#about" class="btn primary">Learn More</a>
-                    <a href="#contact" class="btn secondary">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-image slide-in-right">
-                <img src="src/assets/portfolio photo.png" alt="Aayush Donde" />
-            </div>
-        </div>
-
-        <!-- Quick Access Tabs -->
-        <div class="quick-tabs">
-            <a href="skills.html" class="tab-card">
-                <div class="tab-icon" aria-label="Target icon" role="img">🎯</div>
-                <h3>My Skills</h3>
-                <p>Explore my abilities</p>
-            </a>
-            <a href="projects.html" class="tab-card">
-                <div class="tab-icon" aria-label="Briefcase icon" role="img">💼</div>
-                <h3>My Projects</h3>
-                <p>View my work</p>
-            </a>
+            <h1>Your Name</h1>
+            <p>Web Developer & Designer</p>
+            <button>Download CV</button>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
-        <h2 class="fade-in-up">About Me</h2>
-        <div class="about-content fade-in-up">
-            <p>
-                My name is Aayush Shailesh Donde, and I am 18 years old. I am currently studying Computer Engineering (Class A) at Fr. Conceicao Rodrigues College of Engineering in Mumbai.
-                I live in Borivali, Maharashtra, and enjoy exploring new technologies and solving real-world problems through creative engineering solutions.
-            </p>
+        <h2>About Me</h2>
+        <p>Short bio about yourself.</p>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">Project 1</div>
+            <div class="portfolio-item">Project 2</div>
+            <div class="portfolio-item">Project 3</div>
         </div>
     </section>
 
-    <!-- Interests Section -->
-    <section id="interests" class="interests">
-        <h2 class="fade-in-up">My Interests</h2>
-        <div class="interests-grid">
-            <div class="interest-card bounce-in">
-                <div class="interest-icon" aria-label="Books icon" role="img">📚</div>
-                <p>Reading</p>
-            </div>
-            <div class="interest-card bounce-in">
-                <div class="interest-icon" aria-label="Music icon" role="img">🎵</div>
-                <p>Music</p>
-            </div>
-            <div class="interest-card bounce-in">
-                <div class="interest-icon" aria-label="Pizza icon" role="img">🍕</div>
-                <p>Foodie</p>
-            </div>
-            <div class="interest-card bounce-in">
-                <div class="interest-icon" aria-label="Gaming icon" role="img">🎮</div>
-                <p>Gaming</p>
-            </div>
-            <div class="interest-card bounce-in">
-                <div class="interest-icon" aria-label="Camera icon" role="img">📷</div>
-                <p>Photography</p>
-            </div>
-            <div class="interest-card bounce-in">
-                <div class="interest-icon" aria-label="Airplane icon" role="img">✈️</div>
-                <p>Travel</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn primary">Send Message</button>
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Aayush Donde. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
