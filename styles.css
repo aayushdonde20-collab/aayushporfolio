@@ -4,7 +4,6 @@ body {
     background: #11111a;
     color: #fff;
 }
-
 nav {
     width: 100%;
     background: #181d35;
@@ -18,14 +17,12 @@ nav {
     box-shadow: 0 2px 8px #0006;
     z-index: 10;
 }
-
 .logo {
     font-weight: bold;
     font-size: 2rem;
     color: #fff;
     margin-right: auto;
 }
-
 nav ul {
     list-style: none;
     display: flex;
@@ -33,64 +30,36 @@ nav ul {
     margin: 0;
     padding: 0;
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.2s;
 }
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #9276f9;
+nav ul li a span {
+    font-size: 1.5rem;
+    margin-left: 5px;
 }
-
-#tab-content {
+#main-content {
     margin-top: 80px;
     width: 100vw;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
-
-.tab {
-    display: none;
+.section {
     padding: 40px 4vw;
     min-height: 70vh;
-    animation: fadeIn 0.5s;
 }
-
-.tab.active {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0;}
-    to { opacity: 1;}
-}
-
 .home-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4vw;
 }
-
-.home-flex h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 0.6em;
-}
-.home-flex h2 {
-    font-size: 1.5rem;
-    color: #cfcfcf;
-}
-
-.highlight {
-    color: #9276f9;
-}
-
+.home-flex h1 { font-size: 2.8rem; font-weight: bold; margin-bottom: 0.6em;}
+.home-flex h2 { font-size: 1.5rem; color: #cfcfcf;}
+.highlight { color: #9276f9; }
 .profile-pic img {
     width: 320px;
     height: 380px;
@@ -99,7 +68,6 @@ nav ul li a.active {
     border: 2px solid #4050ff99;
     box-shadow: 0 0 24px #20154a8c;
 }
-
 .card-row {
     display: flex;
     justify-content: center;
@@ -107,7 +75,6 @@ nav ul li a.active {
     flex-wrap: wrap;
     margin-top: 34px;
 }
-
 .card {
     background: #191a2f;
     border-radius: 16px;
@@ -120,11 +87,17 @@ nav ul li a.active {
     margin-bottom: 16px;
     border: 2px solid #4050ff50;
     transition: transform .2s;
+    cursor: pointer;
 }
 .card:hover {transform: scale(1.08);box-shadow:0 0 16px #9577f6aa;}
-.card span{font-size:2rem;}
-.card h3{margin:10px 0 5px 0;}
-.card p{color:#aaa;font-size:0.95rem;}
+.card span {font-size:2rem;}
+.card h3 {margin:10px 0 5px 0;}
+.card p {color:#aaa;font-size:0.95rem;}
+.card a {
+    color: #9276f9;
+    text-decoration: underline;
+}
+.card a:hover { color: #6363f7; }
 
 form {
     display: flex;
@@ -133,7 +106,6 @@ form {
     max-width: 500px;
     margin: 40px auto 0 auto;
 }
-
 input, textarea {
     border: 2px solid #4050ff50;
     background: #222235;
@@ -143,8 +115,7 @@ input, textarea {
     border-radius: 8px;
     resize: vertical;
 }
-
-button[type="submit"], .home-flex button {
+button[type="submit"], .btn {
     background: linear-gradient(90deg, #9276f9 40%, #6363f7 99%);
     color: #fff;
     padding: 12px 36px;
@@ -156,9 +127,44 @@ button[type="submit"], .home-flex button {
     margin-right: 10px;
     box-shadow: 0 0 10px #6363f7a0;
     transition: background 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-block;
 }
 
-button:hover {
+button:hover, .btn:hover {
     background: linear-gradient(90deg, #6363f7 40%, #9276f9 99%);
     box-shadow: 0 0 18px #6363f7cc;
+}
+
+/* MODAL POPUPS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    overflow: auto;
+    background-color: rgba(10, 10, 40, 0.88);
+}
+.modal-content {
+    background-color: #181d35;
+    margin: 5% auto;
+    padding: 40px 40px;
+    border: 2px solid #4050ff99;
+    border-radius: 18px;
+    width: 80%;
+    max-width: 580px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px #222;
+}
+.close {
+    position: absolute;
+    top: 16px;
+    right: 28px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight:bold;
+    cursor:pointer;
 }
