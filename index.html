@@ -2,53 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chroma Folio Replica</title>
+    <title>Aayush Donde Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="logo">Aayush Donde</div>
+        <ul>
+            <li><a href="#" data-tab="home">Home</a></li>
+            <li><a href="#" data-tab="about">About</a></li>
+            <li><a href="#" data-tab="skills">Skills</a></li>
+            <li><a href="#" data-tab="projects">Projects</a></li>
+            <li><a href="#" data-tab="interests">Interests</a></li>
+            <li><a href="#" data-tab="contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Your Name</h1>
-            <p>Web Developer & Designer</p>
-            <button>Download CV</button>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Short bio about yourself.</p>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">Project 1</div>
-            <div class="portfolio-item">Project 2</div>
-            <div class="portfolio-item">Project 3</div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+    <div id="tab-content">
+        <section id="home" class="tab active">
+            <div class="home-flex">
+                <div>
+                    <h1>Hi, I'm <span class="highlight">Aayush Shailesh Donde</span></h1>
+                    <h2>Computer Engineering Student</h2>
+                    <p>Exploring new technologies and solving real-world problems through creative engineering solutions</p>
+                    <button onclick="switchTab('about')">Learn More</button>
+                    <button onclick="switchTab('contact')">Get in Touch</button>
+                </div>
+                <div class="profile-pic">
+                    <img src="portfolio-1.jpg" alt="Aayush Shailesh Donde">
+                </div>
+            </div>
+        </section>
+        <section id="about" class="tab">
+            <h2>About Me</h2>
+            <p>My name is Aayush Shailesh Donde, and I am 18 years old.
+            I am currently studying Computer Engineering (Class A) at Fr. Conceicao Rodrigues College of Engineering in Mumbai.
+            I live in Borivali, Maharashtra, and enjoy exploring new technologies and solving real-world problems through creative engineering solutions.</p>
+        </section>
+        <section id="skills" class="tab">
+            <h2>My Skills</h2>
+            <div class="card-row">
+                <div class="card"><img src="portfolio-2.jpg" alt="Skills"><h3>My Skills</h3><p>Explore my abilities</p></div>
+                <div class="card"><img src="portfolio-3.jpg" alt="Projects"><h3>My Projects</h3><p>View my work</p></div>
+            </div>
+        </section>
+        <section id="projects" class="tab">
+            <h2>Projects</h2>
+            <p>Details of your major projects.</p>
+        </section>
+        <section id="interests" class="tab">
+            <h2>My Interests</h2>
+            <div class="card-row">
+                <div class="card"><span>📚</span><h3>Reading</h3></div>
+                <div class="card"><span>🎵</span><h3>Music</h3></div>
+                <div class="card"><span>🍕</span><h3>Foodie</h3></div>
+                <div class="card"><span>🎮</span><h3>Gaming</h3></div>
+                <div class="card"><span>📷</span><h3>Photography</h3></div>
+                <div class="card"><span>✈️</span><h3>Travel</h3></div>
+            </div>
+        </section>
+        <section id="contact" class="tab">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
