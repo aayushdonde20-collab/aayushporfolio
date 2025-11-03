@@ -9,48 +9,57 @@
     <nav>
         <div class="logo">Aayush Donde</div>
         <ul>
-            <li><a href="#" data-tab="home">Home</a></li>
-            <li><a href="#" data-tab="about">About</a></li>
-            <li><a href="#" data-tab="skills">Skills</a></li>
-            <li><a href="#" data-tab="projects">Projects</a></li>
-            <li><a href="#" data-tab="interests">Interests</a></li>
-            <li><a href="#" data-tab="contact">Contact</a></li>
+            <li><a href="#home" data-scroll>Home</a></li>
+            <li><a href="#about" data-scroll>About</a></li>
+            <li><a href="#skills" id="skillsTab">Skills <span>💻</span></a></li>
+            <li><a href="#projects" id="projectsTab">Projects <span>📦</span></a></li>
+            <li><a href="#interests" data-scroll>Interests</a></li>
+            <li><a href="#contact" data-scroll>Contact</a></li>
         </ul>
     </nav>
 
-    <div id="tab-content">
-        <section id="home" class="tab active">
+    <div id="main-content">
+        <section id="home" class="section">
             <div class="home-flex">
                 <div>
                     <h1>Hi, I'm <span class="highlight">Aayush Shailesh Donde</span></h1>
                     <h2>Computer Engineering Student</h2>
                     <p>Exploring new technologies and solving real-world problems through creative engineering solutions</p>
-                    <button onclick="switchTab('about')">Learn More</button>
-                    <button onclick="switchTab('contact')">Get in Touch</button>
+                    <a class="btn" href="#about" data-scroll>Learn More</a>
+                    <a class="btn" href="#contact" data-scroll>Get in Touch</a>
                 </div>
                 <div class="profile-pic">
-                    <img src="portfolio photo.png" alt="Aayush Shailesh Donde">
+                    <img src="portfolio photo.png" alt="Profile">
                 </div>
             </div>
         </section>
-        <section id="about" class="tab">
+        <section id="about" class="section">
             <h2>About Me</h2>
             <p>My name is Aayush Shailesh Donde, and I am 18 years old.
             I am currently studying Computer Engineering (Class A) at Fr. Conceicao Rodrigues College of Engineering in Mumbai.
             I live in Borivali, Maharashtra, and enjoy exploring new technologies and solving real-world problems through creative engineering solutions.</p>
         </section>
-        <section id="skills" class="tab">
-            <h2>My Skills</h2>
+        <section id="skills" class="section">
+            <h2>My Skills <span>💻</span></h2>
             <div class="card-row">
-                <div class="card"><img src="portfolio-2.jpg" alt="Skills"><h3>My Skills</h3><p>Explore my abilities</p></div>
-                <div class="card"><img src="portfolio-3.jpg" alt="Projects"><h3>My Projects</h3><p>View my work</p></div>
+                <div class="card" id="openSkills">
+                    <span>💻</span>
+                    <h3>My Skills</h3>
+                    <p>Explore my abilities</p>
+                </div>
             </div>
         </section>
-        <section id="projects" class="tab">
-            <h2>Projects</h2>
-            <p>Details of your major projects.</p>
+        <section id="projects" class="section">
+            <h2>My Projects <span>📦</span></h2>
+            <div class="card-row">
+                <div class="card" id="openProjects">
+                    <span>📦</span>
+                    <h3>My Projects</h3>
+                    <p>View my work</p>
+                </div>
+            </div>
         </section>
-        <section id="interests" class="tab">
+        <section id="interests" class="section">
             <h2>My Interests</h2>
             <div class="card-row">
                 <div class="card"><span>📚</span><h3>Reading</h3></div>
@@ -61,7 +70,7 @@
                 <div class="card"><span>✈️</span><h3>Travel</h3></div>
             </div>
         </section>
-        <section id="contact" class="tab">
+        <section id="contact" class="section">
             <h2>Contact Me</h2>
             <form>
                 <input type="text" placeholder="Your Name">
@@ -70,6 +79,40 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>
+    </div>
+
+    <!-- Skills Pop-up Modal -->
+    <div id="skillsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('skillsModal')">&times;</span>
+            <h2>My Skills <span>💻</span></h2>
+            <ul>
+                <li>Web development (HTML, CSS, JavaScript)</li>
+                <li>App development</li>
+                <li>Business strategy</li>
+                <li>Retail and E-commerce analysis</li>
+                <li>AgriTech solutions</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Projects Pop-up Modal -->
+    <div id="projectsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('projectsModal')">&times;</span>
+            <h2>My Projects <span>📦</span></h2>
+            <div class="card-row">
+                <div class="card">
+                    <span>🛒</span>
+                    <h3>Project 1: KhetFresh</h3>
+                    <p><a href="https://khetfresh-98.lovable.app" target="_blank">Visit KhetFresh</a></p>
+                </div>
+                <div class="card">
+                    <span>🚧</span>
+                    <h3>Project 2: Coming Soon</h3>
+                    <p>Stay tuned for more!</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
